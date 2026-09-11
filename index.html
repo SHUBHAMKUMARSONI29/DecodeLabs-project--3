@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Student Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            ⚡ Student Dashboard
+        </div>
+
+        <button id="themeToggle" class="theme-btn">
+            🌙 Dark Mode
+        </button>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section class="welcome-card">
+            <div>
+
+                <h1>
+                    Welcome, <span id="displayName">Student</span>!
+                </h1>
+
+                <p id="welcomeMessage">
+                    Explore the student deatils.
+                </p>
+            </div>
+
+            <div class="welcome-icon">
+                💻
+            </div>
+        </section>
+
+
+        <!-- Name Section -->
+        <section class="card">
+
+            <h2>👋 Personalize Your Dashboard</h2>
+
+            <p>Enter your name and update the page dynamically.</p>
+
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="nameInput"
+                    placeholder="Enter your name"
+                    maxlength="30"
+                >
+
+                <button id="nameButton">
+                    Update Name
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- Interactive Cards -->
+        <section class="grid">
+
+
+            <!-- Counter -->
+            <div class="card interactive-card">
+
+                <div class="card-icon">
+                    🔢
+                </div>
+
+                <h2>Counter</h2>
+
+                <p>Use the buttons to change the counter.</p>
+
+                <div id="counterValue" class="counter">
+                    0
+                </div>
+
+                <div class="button-group">
+
+                    <button id="decreaseBtn" class="secondary-btn">
+                        −
+                    </button>
+
+                    <button id="resetBtn" class="reset-btn">
+                        Reset
+                    </button>
+
+                    <button id="increaseBtn" class="primary-btn">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Profile -->
+            <div class="card interactive-card">
+
+                <div class="card-icon">
+                    👤
+                </div>
+
+                <h2>Student Profile</h2>
+
+                <p>Click the button to show or hide your profile.</p>
+
+                <button id="profileButton" class="primary-btn">
+                    Show Profile
+                </button>
+
+                <div id="profile" class="profile-box hidden">
+
+                    <h3>Student Information</h3>
+
+                    <p>
+                        <strong>Name:</strong>
+                        <span id="profileName">Student</span>
+                    </p>
+
+                    <p>
+                        <strong>Course:</strong>
+                        Frontend Development
+                    </p>
+
+                    <p>
+                        <strong>Project:</strong>
+                        Interactive Web Elements
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Progress -->
+            <div class="card interactive-card">
+
+                <div class="card-icon">
+                    📊
+                </div>
+
+                <h2>Learning Progress</h2>
+
+                <p>Increase your progress using the button.</p>
+
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-bar">
+                        0%
+                    </div>
+                </div>
+
+                <p id="progressText">
+                    Your progress is 0%.
+                </p>
+
+                <button id="progressButton" class="primary-btn">
+                    Increase Progress
+                </button>
+
+            </div>
+
+
+            <!-- Dynamic Message -->
+            <div class="card interactive-card">
+
+                <div class="card-icon">
+                    💬
+                </div>
+
+                <h2>Dynamic Message</h2>
+
+                <p id="dynamicMessage">
+                    Click the button to change this message.
+                </p>
+
+                <button id="messageButton" class="primary-btn">
+                    Change Message
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Event Demonstration -->
+        <section class="card event-section">
+
+            <h2>⚡ JavaScript Interaction</h2>
+
+            <p>
+                This section demonstrates DOM events and dynamic updates.
+            </p>
+
+            <div class="event-box">
+
+                <span id="eventStatus">
+                    Waiting for an action...
+                </span>
+
+            </div>
+
+            <button id="eventButton" class="primary-btn">
+                Trigger Event
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        Action completed successfully!
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Interactive Student Dashboard
+        </p>
+
+        <p>
+            Built with HTML • CSS • JavaScript
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
